@@ -1,372 +1,275 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CV - Salsabila Nurpathin (Contoh)</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV Responsive - Salsabila</title>
 
-  <!-- Google font -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700;800&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Nunito:wght@300;400;600&display=swap" rel="stylesheet">
 
-  <style>
-    :root{
-      --bg:#f5f2ef;
-      --dark:#3f4246;
-      --accent:#d9cfc8;
-      --muted:#9a968f;
-      --peach:#e8c7a4;
-      --card-shadow: rgba(0,0,0,0.06);
-    }
+<style>
+/* ===========================
+   MOBILE FIRST BASE STYLE
+   =========================== */
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background: white;
-      color:var(--dark);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-    }
+:root {
+  --dark: #3f4246;
+  --accent: #e8e3dd;
+  --peach: #e8c7a4;
+  --muted: #7d7d7d;
+}
 
-    /* Container */
-    .cv{
-      max-width:980px;
-      margin:28px auto;
-      background: white;
-      border-radius:10px 10px 0 0;
-      overflow:hidden;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-      border-top: 10px solid var(--dark);
-    }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Nunito, sans-serif;
+  background: #f7f6f4;
+  color: var(--dark);
+}
 
-    /* Header */
-    .cv-header{
-      display:flex;
-      gap:28px;
-      background: linear-gradient(90deg, #404245 0%, #e9e3dd 50%);
-      padding:28px 32px;
-      align-items:center;
-    }
+/* WRAPPER */
+.cv {
+  max-width: 900px;
+  margin: 16px auto;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
 
-    .photo-wrap{
-      width:160px;
-      min-width:160px;
-      height:160px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-    }
-    .photo{
-      width:140px;
-      height:140px;
-      border-radius:50%;
-      border:8px solid #fff;
-      box-shadow:0 6px 18px rgba(0,0,0,0.18);
-      object-fit:cover;
-      background: #eee;
-    }
+/* HEADER (MOBILE = CENTER) */
+.cv-header {
+  text-align: center;
+  padding: 24px;
+  background: #3f4246;
+  color: white;
+}
 
-    .header-info{
-      flex:1;
-      color: #111;
-    }
-    .name{
-      font-family: "Montserrat", sans-serif;
-      font-weight:800;
-      font-size:36px;
-      margin:0 0 6px 0;
-      color:#0f0f0f;
-      letter-spacing: -0.5px;
-    }
-    .subtitle{
-      margin:0 0 12px 0;
-      color: #6b645f;
-      font-weight:600;
-      text-transform:uppercase;
-      font-size:12px;
-      letter-spacing:1px;
-    }
+.photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 6px solid white;
+  object-fit: cover;
+  margin-bottom: 14px;
+}
 
-    .contact{
-      display:flex;
-      gap:18px;
-      flex-wrap:wrap;
-      align-items:center;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .contact .item{
-      display:flex;
-      gap:8px;
-      align-items:center;
-      min-width:180px;
-    }
-    .icon{
-      width:18px;
-      height:18px;
-      display:inline-block;
-      opacity:0.9;
-    }
+.name {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 800;
+  font-family: Montserrat, sans-serif;
+}
 
-    /* Main body */
-    .cv-body{
-      padding:28px 36px 40px 36px;
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:28px 28px;
-      background: white;
-    }
+.subtitle {
+  margin-top: 6px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  opacity: .85;
+}
 
-    /* Section header style (rounded tag) */
-    .section-tag{
-      position:relative;
-      display:inline-block;
-      background:var(--accent);
-      padding:10px 18px;
-      border-radius:12px;
-      font-weight:700;
-      margin-bottom:14px;
-      font-family: "Montserrat", sans-serif;
-      box-shadow: 6px 6px 0 rgba(0,0,0,0.06);
-    }
+.contact {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+}
 
-    /* Personal data column */
-    .personal{
-      grid-column: 1 / span 2; /* top wide area to mimic original */
-      display:flex;
-      gap:28px;
-      align-items:flex-start;
-      padding-bottom:10px;
-    }
-    .personal .left{
-      width:45%;
-    }
-    .personal .right{
-      width:55%;
-    }
+.contact div {
+  margin-bottom: 6px;
+}
 
-    .data-list{
-      list-style:none;
-      padding:0;
-      margin:6px 0 0 0;
-      color:var(--dark);
-      font-size:15px;
-      line-height:1.9;
-    }
-    .data-list li{
-      display:flex;
-      align-items:flex-start;
-      gap:10px;
-    }
-    .data-list .label{
-      width:180px;
-      color:var(--muted);
-      font-weight:600;
-    }
+/* BODY SECTION */
+.section {
+  padding: 22px;
+  border-bottom: 1px solid #eee;
+}
 
-    /* Cards for Pendidikan / Pengalaman / Keterampilan / Hobi */
-    .card{
-      padding:18px;
-      border-radius:8px;
-      background:transparent;
-      border: none;
-    }
+.section-title {
+  display: inline-block;
+  background: var(--accent);
+  padding: 7px 14px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-family: Montserrat, sans-serif;
+  margin-bottom: 14px;
+}
 
-    /* make two columns below */
-    .left-col{ /* left column container */
-    }
-    .right-col{
-    }
+/* PERSONAL DATA LIST */
+.data-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    .list-bulleted{
-      margin:8px 0 0 0;
-      padding-left:18px;
-    }
-    .list-bulleted li{ margin:6px 0; }
+.data-list li {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
 
-    /* Skill bars */
-    .skill{
-      margin:12px 0 6px 0;
-    }
-    .skill .label{
-      font-weight:600;
-      font-size:14px;
-      color:var(--dark);
-      margin-bottom:6px;
-    }
-    .bar{
-      height:12px;
-      background:#eee;
-      border-radius:12px;
-      position:relative;
-      overflow:hidden;
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.6);
-    }
-    .bar > span{
-      display:block;
-      height:100%;
-      border-radius:12px;
-      background: linear-gradient(90deg,var(--peach), #e0b48b);
-      position:relative;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.08);
-    }
+.data-label {
+  font-weight: 600;
+  color: var(--muted);
+  display: block;
+}
 
-    /* Hobi card right column */
-    .hobi-list{ list-style:disc; padding-left:18px; margin:8px 0 0 0; color:var(--dark); }
+/* LIST */
+ul.clean {
+  margin: 0;
+  padding-left: 18px;
+}
 
-    /* Responsive */
-    @media (max-width:880px){
-      .cv-body{ grid-template-columns: 1fr; padding:22px; }
-      .personal{flex-direction:column}
-      .personal .left, .personal .right{width:100%}
-      .photo-wrap{display:none}
-      .name{font-size:28px}
-    }
+/* SKILL BAR */
+.skill {
+  margin-bottom: 16px;
+}
 
-    /* small tweaks to mimic the little slanted shadow decoration on tags */
-    .section-tag::after{
-      content:"";
-      position:absolute;
-      right:-10px;
-      top:10px;
-      width:18px;
-      height:18px;
-      background:rgba(0,0,0,0.06);
-      transform:rotate(-20deg);
-      border-radius:4px;
-    }
+.skill-name {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
 
-    /* thin footer strip like the image */
-    .cv-footer{
-      height:18px;
-      background:linear-gradient(90deg,#252728,#2e2e2f);
-    }
+.skill-bar {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
 
-  </style>
+.skill-bar span {
+  display: block;
+  height: 100%;
+  background: var(--peach);
+  border-radius: 10px;
+}
+
+/* FOOTER */
+.footer {
+  background: #2c2c2c;
+  height: 16px;
+}
+
+
+/* ===========================
+   RESPONSIVE DESKTOP
+   =========================== */
+
+@media (min-width: 700px) {
+
+  /* Header berubah ke layout kiri-kanan */
+  .cv-header {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    gap: 24px;
+    padding: 32px;
+  }
+
+  .photo {
+    margin: 0;
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Body menjadi 2 kolom */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+}
+
+</style>
 </head>
 <body>
 
-  <div class="cv" role="document" aria-label="Curriculum Vitae">
-    <!-- header -->
-    <header class="cv-header" role="banner">
-      <div class="photo-wrap" aria-hidden="true">
-        <!-- Ganti src ke foto Anda -->
-        <img src="1.jpg" alt="Foto profil" class="photo">
+<div class="cv">
+
+  <!-- HEADER -->
+  <header class="cv-header">
+    <img src="1.jpg" class="photo">
+
+    <div>
+      <h1 class="name">Salsabila Nurpathin</h1>
+      <p class="subtitle">LULUSAN BARU</p>
+
+      <div class="contact">
+        <div>Email: salsabilanp317@gmail.com</div>
+        <div>Telp: 0851-7229-8817</div>
+        <div>Alamat: Klari, Karawang Timur</div>
+        <div>Website: rian23-tni.github.io/Salsabila</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- DATA PRIBADI -->
+  <section class="section">
+    <div class="section-title">Data Pribadi</div>
+
+    <ul class="data-list">
+      <li><span class="data-label">Nama</span>Salsabila Nurpathin</li>
+      <li><span class="data-label">Tempat/Tanggal Lahir</span>Karawang, 31 Juli 2007</li>
+      <li><span class="data-label">Alamat</span>Dusun krajan, RT.003/002, Ds. Gintungkerta, Klari, Jawa Barat</li>
+      <li><span class="data-label">Jenis Kelamin</span>Perempuan</li>
+      <li><span class="data-label">Kewarganegaraan</span>Indonesia</li>
+      <li><span class="data-label">Status</span>Belum Menikah</li>
+    </ul>
+  </section>
+
+  <!-- 2 KOLUM RESPONSIVE -->
+  <section class="section grid-2">
+
+    <!-- LEFT SIDE -->
+    <div>
+
+      <div class="section-title">Pendidikan</div>
+      <ul class="clean">
+        <li>SD: Anggadita III</li>
+        <li>SMP: AL-BADAR CIPULUS</li>
+        <li>SMA/MA: YPPA CIPULUS</li>
+      </ul>
+
+      <br>
+
+      <div class="section-title">Kemampuan</div>
+      <div class="skill">
+        <div class="skill-name">Komunikasi</div>
+        <div class="skill-bar"><span style="width:85%"></span></div>
       </div>
 
-      <div class="header-info">
-        <h1 class="name">Salsabila nurpathin</h1>
-        <p class="subtitle">LULUSAN BARU</p>
-
-        <div class="contact" role="contentinfo" aria-label="Informasi kontak">
-          <div class="item">
-            <!-- email icon (simple) -->
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path fill="#111" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
-            </svg>
-            <div> salsabilanp317@gmail.com</div>
-          </div>
-
-          <div class="item">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="#111" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.24.2 2.45.57 3.57a1 1 0 0 1-.25 1.01l-2.2 2.21z"/>
-            </svg>
-            <div>0851-7229-8817</div>
-          </div>
-
-          <div class="item">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="#111" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 17.93V20h-2v-.07A8.001 8.001 0 0 1 4.07 13H6v-2H4.07A8.001 8.001 0 0 1 11 4.07V6h2V4.07A8.001 8.001 0 0 1 19.93 11H18v2h1.93A8.001 8.001 0 0 1 13 19.93z"/>
-            </svg>
-            <div>Klari, karawang timur</div>
-          </div>
-
-          <div class="item">
-            <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path fill="#111" d="M12 2a10 10 0 1 0 .001 20.001A10 10 0 0 0 12 2zm-1 14.5V7l5 4.75L11 16.5z"/>
-            </svg>
-            <div>https://rian23-tni.github.io/Salsabila</div>
-          </div>
-
-        </div>
+      <div class="skill">
+        <div class="skill-name">Manajemen Waktu</div>
+        <div class="skill-bar"><span style="width:78%"></span></div>
       </div>
-    </header>
 
-    <!-- body -->
-    <main class="cv-body">
-      <!-- Personal data is full width (two column look) -->
-      <section class="personal" aria-labelledby="data-pribadi">
-        <div class="left">
-          <div class="section-tag" id="data-pribadi">Data Pribadi</div>
+    </div>
 
-          <ul class="data-list" aria-label="Data pribadi">
-            <li><div class="label">Nama</div><div>: Salsabila Nurpathin</div></li>
-            <li><div class="label">Tempat, Tanggal Lahir</div><div>: Karawang, 31 Juli 2007</div></li>
-            <li><div class="label">Alamat</div><div>: Dusun krajan, RT.003/002, Ds. Gintungkerta, kec. Klari, Jawa Barat.</div></li>
-            <li><div class="label">Jenis Kelamin</div><div>: Perempuan</div></li>
-            <li><div class="label">Kewarganegaraan</div><div>: Indonesia</div></li>
-            <li><div class="label">Status</div><div>: Belum Menikah</div></li>
-          </ul>
-        </div>
+    <!-- RIGHT SIDE -->
+    <div>
 
-        <div class="right">
-          <!-- placeholder to balance spacing (keeps similar look to source) -->
-        </div>
-      </section>
+      <div class="section-title">Pengalaman</div>
+      <ul class="clean">
+        <li>PT. Sankosha – Operator Produksi</li>
+      </ul>
 
-      <!-- Left column content -->
-      <section class="left-col card" aria-labelledby="pendidikan">
-        <div class="section-tag" id="pendidikan">PENDIDIKAN</div>
+      <br>
 
-        <ul class="list-bulleted" aria-label="Pendidikan">
-          <li><strong>SD :</strong> Anggadita III</li>
-          <li><strong>SMP :</strong> AL-BADAR CIPULUS</li>
-          <li><strong>SMA/MA :</strong> YPPA CIPULUS</li>
-        </ul>
+      <div class="section-title">Hobi</div>
+      <ul class="clean">
+        <li>Membaca</li>
+        <li>Menulis</li>
+        <li>Menggambar Kaligrafi</li>
+      </ul>
 
-        <div style="height:18px"></div>
+    </div>
 
-        <div class="section-tag" style="margin-top:6px">KEMAMPUAN</div>
-        <div style="margin-top:10px">
-          <div class="skill" aria-label="Komunikasi">
-            <div class="label">Komunikasi</div>
-            <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85" title="85%">
-              <span style="width:85%"></span>
-            </div>
-          </div>
+  </section>
 
-          <div class="skill" aria-label="Manajemen waktu">
-            <div class="label">Manajemen waktu</div>
-            <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="78" title="78%">
-              <span style="width:78%"></span>
-            </div>
-          </div>
-        </div>
-      </section>
+  <!-- FOOTER STRIP -->
+  <div class="footer"></div>
 
-      <!-- Right column content -->
-      <section class="right-col card" aria-labelledby="pengalaman">
-        <div class="section-tag" id="pengalaman">PENGALAMAN</div>
-
-        <ul class="list-bulleted" aria-label="Pengalaman kerja">
-          <li><strong>PT. Sankosha</strong><br> - Operator produksi</li>
-        </ul>
-
-        <div style="height:18px"></div>
-
-        <div class="section-tag" style="margin-top:6px">HOBI</div>
-        <ul class="hobi-list" aria-label="Hobi">
-          <li>Membaca</li>
-          <li>Menulis</li>
-          <li>Menggambar Kaligrafi</li>
-        </ul>
-      </section>
-
-    </main>
-
-    <div class="cv-footer" aria-hidden="true"></div>
-  </div>
+</div>
 
 </body>
 </html>
