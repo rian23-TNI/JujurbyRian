@@ -87,6 +87,37 @@ body {
 li.indent {
    text-indent: 20px;
 } 
+
+.social-container {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.social-container .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    transition: 0.3s;
+}
+
+/* Warna tiap icon */
+.email { background: #ff7b00; }
+.instagram { background: #d6249f; }
+.whatsapp { background: #25D366; }
+.tiktok { background: #000; }
+
+/* Efek hover */
+.icon:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
    
 .section-title {
   display: inline-block;
